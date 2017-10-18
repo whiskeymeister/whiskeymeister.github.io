@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+	<title>Bilder der Vergangenheit</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2017.css">
+	<link href='https://fonts.googleapis.com/css?family=Waiting for the Sunrise' rel='stylesheet'>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+	<style>
+		body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+		body {font-size:16px; background-color:#eeeedd;}
+		textarea {height:150px; resize:none;}
+		.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+		.w3-half img:hover{opacity:1}
+		a:link {text-decoration:none;}
+		a#link:hover {color:green;}
+		a#link {color:#99e600;}
+	</style>
+	
+	<body>
+		<!-- Menü -->
+		<nav class="w3-sidebar w3-2017-kale w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+		  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Menü schließen</a>
+		  <div class="w3-container">
+			<h3 class="w3-padding-64" style="font-family: 'Waiting for the sunrise'; font-size: 42px;"><b>Bilder der<br>Vergangenheit</b></h3>
+		  </div>
+		  <div class="w3-bar-block">
+			<a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+			<a onclick="accordionFunc('drop')" class="w3-bar-item w3-button w3-hover-white">Galerie</a>
+			<div id="drop" class="w3-container w3-hide">
+				<a href="#galerie" onclick="w3_close()" class="w3-bar-item w3-buttion w3-hover-white">Allgemeines</a>
+				<a href="#a3" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">A3</a>
+				<a href="#a4" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">A4</a>
+				<a href="#a5" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">A5</a>
+			</div>
+			<a href="#preis" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Preise</a>
+			<a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Kontakt</a> 
+		  </div>
+		</nav>
+
+		<!-- Menü auf kleinen Bildschirmen -->
+		<header class="w3-container w3-top w3-hide-large w3-2017-kale w3-xlarge w3-padding">
+		  <a href="javascript:void(0)" class="w3-button w3-2017-kale w3-margin-right" onclick="w3_open()">☰</a>
+		  <span style="font-family: Waiting for the sunrise; font-size:22px;">Bilder der Vergangenheit</span>
+		</header>
+
+		<!-- Overlay-Effekt beim Öffnen der Sidebar auf kleinen Bildschirmen -->
+		<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+		<!-- !PAGE CONTENT! -->
+		<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+		<!-- Home -->
+		<div class="w3-container" style="margin-top:80px" id="#">
+			<h1 class="w3-jumbo"><b>Home</b></h1>
+			<h1 class="w3-xxxlarge w3-text-lime"><b>Über uns.</b></h1>
+			<hr style="width:50px;border:5px solid #6B8E23" class="w3-round">
+			<p>Willkommen auf blarg.de. Wir bieten diese Plattform an, um Ihnen eine Auswahl an Kunstwerken des Künstlers Willi Kreiner präsentieren und verkaufen zu können.</p>
+			<p>Wir bieten als Zahlungsmethode PayPal, Banküberweisung und Barzahlung bei Abholung an.</p>
+			<p>Bitte beachten Sie jedoch, dass wir bei PayPal-Zahlungen einen Aufschlag von 3% berechnen müssen.</p>
+		</div>
+
+		<!-- Galerie -->
+		<div class="w3-container" id="galerie" style="margin-top:75px">
+			<h1 class="w3-xxxlarge w3-text-lime"><b>Galerie.</b></h1>
+			<hr style="width:50px;border:5px solid #6B8E23" class="w3-round">
+				<p>Hier können Sie einen näheren Blick auf unsere Bilder werfen. Klicken Sie auf das Bild für eine vergrößerte Ansicht.</p>
+				<p>Sollten Sie Interesse am Kauf einer unserer Bilder haben, können Sie <b><a href="#preis" id="link">hier</a></b> unsere Preisliste einsehen. Die Preise sind verhandelbar.</p>
+				<p>Wollen Sie mit uns in Kontakt treten, so nutzen Sie unser <b><a href="#contact" id="link">Kontaktformular</a></b>.</p>
+		</div>
+		  
+		<!-- A3 Bilder -->
+		<div class="w3-container" id="a3" style="margin-top:25px">
+			<h1 class="w3-xlarge w3-text-lime"><b>A3.</b></h1>
+			<hr style="width:50px;border:5px solid #6B8E23" class="w3-round">
+		  
+			<!-- Bildreihe 1 -->
+		  <div class="w3-row-padding">
+			<div class="w3-half">
+			  <img src="leuchtturm.jpg" style="width:100%" onclick="onClick(this)" alt="Landschaft">
+			  <img src="blume.jpg" style="width:100%" onclick="onClick(this)" alt="Blume">
+			  <img src="banana.jpg" style="width:100%" onclick="onClick(this)" alt="Supermarkt">
+			  <img src="Boundless.jpg" style="width:100%" onclick="onClick(this)" alt="Boundless">
+			</div>
+		  <!-- Bildreihe 2 -->
+			<div class="w3-half">
+			  <img src="tasta.jpg" style="width:100%" onclick="onClick(this)" alt="Tastatur">
+			  <img src="Brynhild.jpeg" style="width:100%" onclick="onClick(this)" alt="Brynhild">
+			</div>
+		  </div>
+		</div>
+		
+		<!-- A4 Bilder -->
+		<div class="w3-container" id="a4" style="margin-top:25px">
+			<h1 class="w3-xlarge w3-text-lime"><b>A4.</b></h1>
+			<hr style="width:50px;border:5px solid #6B8E23" class="w3-round">
+		  
+		  <!-- Bildreihe 1 -->
+		  <div class="w3-row-padding">
+			<div class="w3-half">
+			  <img src="leuchtturm.jpg" style="width:100%" onclick="onClick(this)" alt="Landschaft">
+			  <img src="blume.jpg" style="width:100%" onclick="onClick(this)" alt="Blume">
+			  <img src="banana.jpg" style="width:100%" onclick="onClick(this)" alt="Supermarkt">
+			  <img src="Boundless.jpg" style="width:100%" onclick="onClick(this)" alt="Boundless">
+			</div>
+		  <!-- Bildreihe 2 -->
+			<div class="w3-half">
+			  <img src="tasta.jpg" style="width:100%" onclick="onClick(this)" alt="Tastatur">
+			  <img src="Brynhild.jpeg" style="width:100%" onclick="onClick(this)" alt="Brynhild">
+			</div>
+		  </div>
+		</div>
+		
+		<!-- A5 Bilder -->
+		<div class="w3-container" id="a5" style="margin-top:25px">
+			<h1 class="w3-xlarge w3-text-lime"><b>A5.</b></h1>
+			<hr style="width:50px;border:5px solid #6B8E23" class="w3-round">
+		  
+		  <!-- Bildreihe 1 -->
+		  <div class="w3-row-padding">
+			<div class="w3-half">
+			  <img src="leuchtturm.jpg" style="width:100%" onclick="onClick(this)" alt="Landschaft">
+			  <img src="blume.jpg" style="width:100%" onclick="onClick(this)" alt="Blume">
+			  <img src="banana.jpg" style="width:100%" onclick="onClick(this)" alt="Supermarkt">
+			  <img src="Boundless.jpg" style="width:100%" onclick="onClick(this)" alt="Boundless">
+			</div>
+		  <!-- Bildreihe 2 -->
+			<div class="w3-half">
+			  <img src="tasta.jpg" style="width:100%" onclick="onClick(this)" alt="Tastatur">
+			  <img src="Brynhild.jpeg" style="width:100%" onclick="onClick(this)" alt="Brynhild">
+			</div>
+		  </div>
+		</div>
+		
+		<!-- Lightbox -->
+		<div id="modal01" class="w3-modal w3-animate-opacity w3-black" style="padding-top:0" onclick="this.style.display='none'">
+			<span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+			<span class="w3-display-left w3-btn w3-xxlarge" onclick="plusDivs(-1)"> < </span>
+			<span class="w3-display-right w3-btn w3-xxlarge" onclick="plusDivs(1)"> > </span>
+			<div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+			  <img id="img01" class="w3-image">
+			  <p id="caption"></p>
+			</div>
+		</div>
+		
+		<!-- Preise -->
+		<div class="w3-container" style="margin-top:80px" id="preis">
+			<h1 class="w3-xxxlarge w3-text-lime"><b>Preise.</b></h1>
+			<hr style="width:50px;border:5px solid #6B8E23" class="w3-round">
+			<p>Wir berechnen unsere Bilder nach Größe. Hier finden Sie eine kurze Übersicht, welches Bildformat wie viel kostet.</p>
+			<p>Alle unsere Preise verstehen sich auf VHB (Verhandlungsbasis).</p>
+			<p>Als Zahlungsmethode akzeptieren wir Banküberweisung und Barzahlung bei Abholung. Außerdem bieten wir Versand der Bilder per DHL an. Die Versandkosten sind dabei vom Käufer zu tragen.</p>
+		</div>
+
+		<div class="w3-row">
+			<div class="w3-half w3-margin-bottom">
+				<ul class="w3-ul w3-lime w3-center">
+					<li class="w3-dark-grey w3-xlarge w3-padding-32">Format/Leistung</li>
+					<li class="w3-padding-16">A3-Bild</li>
+					<li class="w3-padding-16">A4-Bild</li>
+					<li class="w3-padding-16">A5-Bild</li>
+					<li class="w3-padding-16">Versand</li>
+				</ul>
+			</div>
+			<div class="w3-half w3-margin-bottom">
+				<ul class="w3-ul w3-white w3-center">
+					<li class="w3-grey w3-xlarge w3-padding-32">Preis</li>
+					<li class="w3-padding-16">80,00 €</li>
+					<li class="w3-padding-16">70,00 €</li>
+					<li class="w3-padding-16">60,00 €</li>
+					<li class="w3-padding-16">5,95 €</li>
+				</ul>
+			</div>
+		</div>
+				
+			
+		<!-- Kontaktformular -->
+		<div class="w3-container" id="contact" style="margin-top:75px">
+			<h1 class="w3-xxxlarge w3-text-lime"><b>Kontakt.</b></h1>
+			<hr style="width:50px;border:5px solid #6B8E23" class="w3-round">
+			<p>Sie haben Fragen oder sind am Kauf unserer Bildern interessiert? Dann nutzen Sie unser Kontaktformular für Ihr Anliegen. Wir melden uns baldmöglichst bei Ihnen zurück.</p>
+			<form id="contactform" target="_blank" method="POST">
+				<div class="w3-section">
+					<label for="Name">Name</label>
+					<input class="w3-input w3-border" type="text" name="Name" placeholder="Max Mustermann" required>
+				</div>
+				<div class="w3-section">
+					<label for="Email">E-Mail</label>
+					<input class="w3-input w3-border" type="text" name="Email" placeholder="E-mail@email.de" required>
+				</div>
+				<div class="w3-section">
+					<label for="Nachricht">Nachricht</label>
+					<textarea class="w3-input w3-border" type="text" name="Message" placeholder="Meine Nachricht..." required></textarea>
+				</div>
+				<input type="text" name="_testing" style="display:none" />
+				<input type="hidden" name="_next" value="mail_ok.html" />
+				<input type="hidden" name="_subject" value="Bildverkauf - Anfrage" />
+				<button type="submit" class="w3-button w3-block w3-padding-large w3-2017-kale w3-margin-bottom w3-hover-lime">Nachricht senden</button>
+			</form>  
+		</div>
+
+		<!-- Ende des Seiteninhalts... -->
+		</div>
+
+		<!-- Impressum -->
+		<div class="w3-lime w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">
+			Impressum:<br/>
+			Max Mustermann<br/>
+			Stephanstraße 2342<br/>
+			11111 Mannshausen <br/>
+		</div>
+	
+		<script>
+		var contact = document.getElementById('contactform');
+		contactform.setAttribute('action', '//formspree.io/' + 'biersaeufer' + '@' + 'gmail' + '.' + 'com');
+		
+		// Sidebar schließen/öffnen
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+			document.getElementById("myOverlay").style.display = "block";
+		}
+		 
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+			document.getElementById("myOverlay").style.display = "none";
+		}
+
+		// Modal Bildergalerie
+		function onClick(element) {
+		  document.getElementById("img01").src = element.src;
+		  document.getElementById("modal01").style.display = "block";
+		  var captionText = document.getElementById("caption");
+		  captionText.innerHTML = element.alt;
+		}
+		
+		var slideIndex = 1;
+			showDivs(slideIndex);
+		
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
+		}
+		
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("demo");
+		  var captionText = document.getElementById("caption");
+			  if (n > x.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = x.length}
+			  for (i = 0; i < x.length; i++) {
+				 x[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				 dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+
+		  }
+		  x[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " w3-opacity-off";
+		  captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+		
+		//Dropdown function
+		function accordionFunc(id) {
+			var x = document.getElementById(id);
+			if(x.className.indexOf("w3-show") == -1) {
+				x.className += "w3-show";
+			} else {
+				x.className = x.className.replace("w3-show", "");
+			}
+		}
+		</script>
+	</body>
+</html>
