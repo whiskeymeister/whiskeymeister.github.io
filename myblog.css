@@ -1,0 +1,86 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+header {
+    background-color: #4A8774;
+    color: #AA4622;
+    text-align: center;
+    font-family: 'Alfa Slab One';font-size: 25px;
+    font-weight: bold;
+    padding: 3em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.HolyGrail {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.body {
+  background-color: #DDEEE9;
+  display: flex;
+  flex: 1;
+}
+
+.content {
+  padding: 1em;
+  flex: 1;
+}
+
+.nav, .ads {
+  /* 12em is the width of the columns */
+  flex: 0 0 12em;
+}
+
+.nav {
+  /* put the nav on the left */
+  order: -1;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+li {
+    padding: 1em;
+}
+
+li:hover {
+    color: #E85621;
+    font-weight: bold;
+}
+
+.HolyGrail, .body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+    background-color: #30160D;
+    color: #4A8774;
+    padding: 1em;
+    text-align: right;
+}
+
+@media (min-width: 768px) {
+  .body {
+    flex-direction: row;
+    flex: 1;
+  }
+  .content {
+    flex: 1;
+  }
+  .nav, .ads {
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
+  }
+}
