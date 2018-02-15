@@ -38,12 +38,9 @@ a {
   flex: 1;
 }
 
-.nav, .ads {
+.nav {
   /* 12em is the width of the columns */
   flex: 0 0 12em;
-}
-
-.nav {
   /* put the nav on the left */
   order: -1;
   text-align: center;
@@ -79,7 +76,7 @@ footer {
   .content {
     flex: 1;
   }
-  .nav, .ads {
+  .nav {
     /* 12em is the width of the columns */
     flex: 0 0 12em;
   }
